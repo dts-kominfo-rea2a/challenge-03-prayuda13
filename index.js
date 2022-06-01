@@ -21,7 +21,7 @@ const dataBelanjaan = [
 ];
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const listBelanjaan = function () {
+const listBelanjaan = (dataBelanjaan) => {
   let namaBelanjaan = [];
   for (let i = 0; i < dataBelanjaan.length; i++) {
     namaBelanjaan.push('- ' + dataBelanjaan[i].nama + ' x ' + dataBelanjaan[i].kuantitas);
@@ -31,7 +31,7 @@ const listBelanjaan = function () {
 };
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const totalBelanjaan = function () {
+const totalBelanjaan = (dataBelanjaan) => {
   let total = 0;
   for (let i = 0; i < dataBelanjaan.length; i++) {
     total += dataBelanjaan[i].harga * dataBelanjaan[i].kuantitas;
